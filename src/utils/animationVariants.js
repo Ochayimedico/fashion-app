@@ -1,23 +1,69 @@
 export const sideMenuVariants = {
-  hidden: { opacity: 0, x: 0 },
+  hidden: { opacity: 0, x: "-100%" },
   visible: {
     opacity: 1,
-    x: "100vw",
+    x: "0",
     transition: {
       duration: 1,
+
       ease: "easeInOut",
     },
   },
   exit: {
     x: "-100vw",
+    opacity: 0,
     transition: {
       duration: 1,
       ease: "easeOut",
     },
   },
 };
-export const menuVariants = {
+export const listVariants = {
+  hidden: { opacity: 0, x: "-100%" },
+  visible: {
+    opacity: 1,
+    x: "0",
+    transition: {
+      ease: "easeInOut",
+      duration: 2,
+    },
+  },
+};
+export const childListVariants = {
+  hidden: { opacity: 0, x: "-100%" },
+  visible: { opacity: 1, x: "0" },
+  transition: {
+    ease: "easeInOut",
+    delay: 1,
+    duration: 2,
+  },
+};
+
+export const seeAllListVariants = {
   hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.5,
+      ease: "easeIn",
+      duration: 0.3,
+    },
+  },
+  // exit: {
+  //   opacity: 0,
+  //   y: "-100%",
+  //   transition: {
+  //     duration: 1,
+  //   },
+  // },
+};
+export const childSeeAllListVariants = {
+  hidden: { opacity: 0, y: -5 },
+  visible: { opacity: 1, y: 0 },
+};
+export const menuVariants = {
+  // hidden: { opacity: 0 },
   visible: {
     x: "-100vw",
     opacity: 1,
@@ -36,12 +82,20 @@ export const menuVariants = {
   },
 };
 
+export const shoppingCategoryContainerVariants = {
+  hidden: { x: 100 },
+  visible: { x: "-100vw", transition: { repeat: "Infinity", duration: 30 } },
+  exit: { x: 0 },
+  transition: { delay: 3 },
+};
+
 export const shoppingCategoryVariants = {
-  whileHover: { scale: 0.9 },
-  whileTap: { scale: 0.9 },
-  hidden: { opacity: 0 },
-  whileInView: { opacity: 1, transition: { duration: 1 } },
-  viewport: { once: true },
+  hidden: { scale: 0.9 },
+  hover: { scale: 0.9 },
+  tap: { scale: 0.9 },
+  // hidden: { opacity: 0 },
+  inView: { scale: 1, transition: { duration: 0.5, delay: 0.1 } },
+  // viewport: { once: true },
 
   // visible:{
   //   transition:{
@@ -50,3 +104,9 @@ export const shoppingCategoryVariants = {
   //   }
   // }
 };
+
+// export const infiniteSlideVariants={
+//   visible:{
+//   slide
+//   }
+// }

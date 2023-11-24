@@ -1,5 +1,5 @@
 // import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+// import "react-loading-skeleton/dist/skeleton.css";
 import forward from "../../photos/icons/forward.svg";
 import menu from "../../photos/icons/menu.svg";
 import search from "../../photos/icons/search.svg";

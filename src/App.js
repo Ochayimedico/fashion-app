@@ -6,6 +6,8 @@ import { SideMenuContext } from "./utils/context";
 import Modal from "./components/Modal";
 
 import BannersAndShoppingCategory from "./components/Banners/BannersAndShoppingCategory";
+import IntlShopping from "./components/Sections/IntlShopping";
+
 // import Skeleton from "react-loading-skeleton";
 function App() {
   const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -24,6 +26,8 @@ function App() {
         <SideMenu />
         <Modal />
         <BannersAndShoppingCategory />
+
+        <IntlShopping />
       </SideMenuContext.Provider>
     </div>
   );

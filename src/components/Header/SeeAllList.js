@@ -1,6 +1,11 @@
+import { AnimatePresence, motion } from "framer-motion";
+
 import forwardArrow from "../../photos/icons/forward-arrow.svg";
 import collapse from "../../photos/icons/collapse.svg";
-
+import {
+  childSeeAllListVariants,
+  seeAllListVariants,
+} from "../../utils/animationVariants";
 const list = [
   "Early Black Friday Deals",
   "Fashion Music",
@@ -41,7 +46,7 @@ const list = [
   "Fashion Warehouse",
   "Audible",
   "Baby Registry",
-  "CLimate Pledge Friendly",
+  "Climate Pledge Friendly",
   "Credit & Payment Products",
   "Customers' Most-Loved Styles",
   "Your Essentials",
@@ -69,32 +74,46 @@ const SeeAllList = ({ isSeeAllListOpen, setIsSeeAllListOpen }) => {
   };
   return (
     <div>
-      <ul
-        className={`${
-          !isSeeAllListOpen ? "hidden" : "visible"
-        } border-[#ccc] border-t-[1px] border-solid mx-[1rem] py-[0.5rem]`}
-      >
-        {list.map((item, index) => (
-          <li key={index} className="py-[0.5rem] flex flex-row justify-between">
-            {item}
-            {numbers.includes(index) && (
-              <img
-                className="inline-block"
-                src={forwardArrow}
-                alt="forward arrow"
-              />
-            )}
-          </li>
-        ))}
-        <li className="py-[0.5rem] " onClick={collapseSeeAllList}>
-          See Less
-          <img
-            className="inline-block ml-[2px]"
-            src={collapse}
-            alt="collapse arrow"
-          />
-        </li>
-      </ul>
+      <AnimatePresence>
+        <motion.ul
+          variants={seeAllListVariants}
+          initial="hidden"
+          animate={isSeeAllListOpen && "visible"}
+          // exit="exit"
+          className={`${
+            !isSeeAllListOpen ? "hidden" : "visible"
+          } border-[#ccc] border-t-[1px] border-solid mx-[1rem] py-[0.5rem]`}
+        >
+          {list.map((item, index) => (
+            <motion.li
+              variants={childSeeAllListVariants}
+              key={index}
+              className="py-[0.5rem] flex flex-row justify-between"
+            >
+              {item}
+              {numbers.includes(index) && (
+                <img
+                  className="inline-block"
+                  src={forwardArrow}
+                  alt="forward arrow"
+                />
+              )}
+            </motion.li>
+          ))}
+          <motion.li
+            variants={childSeeAllListVariants}
+            className="py-[0.5rem] "
+            onClick={collapseSeeAllList}
+          >
+            See Less
+            <img
+              className="inline-block ml-[2px]"
+              src={collapse}
+              alt="collapse arrow"
+            />
+          </motion.li>
+        </motion.ul>
+      </AnimatePresence>
     </div>
   );
 };

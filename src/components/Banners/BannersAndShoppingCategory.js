@@ -3,7 +3,7 @@ import ShoppingCategory from "./ShoppingCategory";
 
 const BannersAndShoppingCategory = () => {
   return (
-    <article className="relative">
+    <article className="relative bg-[#ccc] h-full overflow-hidden mb-2">
       <Banners />
       <ShoppingCategory />
     </article>

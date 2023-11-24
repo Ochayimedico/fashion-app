@@ -14,7 +14,7 @@ const Modal = () => {
     <div
       className={`${
         isModalOpen ? "visible " : "hidden"
-      } w-[100vw] h-[100vh] fixed top-0 left-0 z-[50] bg-[#000000] opacity-[80%]`}
+      } w-full h-full fixed top-0 left-0 z-[50] bg-[#000000] opacity-[80%]`}
       onClick={closeModal}
     ></div>
   );

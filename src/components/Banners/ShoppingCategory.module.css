@@ -1,0 +1,3 @@
+.animate:hover {
+  animation-play-state: paused;
+}
