@@ -4,9 +4,10 @@ import Header from "./components/Header/Header";
 import SideMenu from "./components/Header/SideMenu";
 import { SideMenuContext } from "./utils/context";
 import Modal from "./components/Modal";
-
 import BannersAndShoppingCategory from "./components/Banners/BannersAndShoppingCategory";
 import IntlShopping from "./components/Sections/IntlShopping";
+import ShoppingItems from "./components/Sections/ShoppingItems";
+import Footer from "./components/Footer/Footer";
 
 // import Skeleton from "react-loading-skeleton";
 function App() {
@@ -26,8 +27,9 @@ function App() {
         <SideMenu />
         <Modal />
         <BannersAndShoppingCategory />
-
         <IntlShopping />
+        <ShoppingItems />
+        <Footer />
       </SideMenuContext.Provider>
     </div>
   );

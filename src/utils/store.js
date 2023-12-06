@@ -1,24 +1,3 @@
-import shoe from "../photos/shopping-categories/shoe.png";
-import storage from "../photos/shopping-categories/storage.png";
-import giftBox from "../photos/shopping-categories/gift-box.png";
-import clothing from "../photos/shopping-categories/clothing.png";
-import trainToy from "../photos/shopping-categories/train-toy.png";
-import beautyProducts from "../photos/shopping-categories/beauty-products.png";
-import decor from "../photos/shopping-categories/decor.png";
-import gifts from "../photos/shopping-categories/gifts.png";
-import fashion from "../photos/shopping-categories/fashion.png";
-import planeToy from "../photos/shopping-categories/plane-toy.png";
-import plates from "../photos/shopping-categories/plates.png";
-import utensils from "../photos/shopping-categories/utensils.png";
-import appliance from "../photos/shopping-categories/appliance.png";
-import socks from "../photos/shopping-categories/socks.png";
-import pc from "../photos/shopping-categories/pc.png";
-import beauty from "../photos/banners/beauty.png";
-import home from "../photos/banners/home.png";
-import kitchen from "../photos/banners/kitchen.png";
-import shop from "../photos/banners/shop.png";
-import toys from "../photos/banners/toys.png";
-
 import chat from "../photos/intl-shopping/chat.png";
 import currency from "../photos/intl-shopping/currency.png";
 import flights from "../photos/intl-shopping/flights.png";
@@ -27,6 +6,29 @@ import location from "../photos/intl-shopping/location.png";
 import notebook from "../photos/intl-shopping/notebook.png";
 import padlock from "../photos/intl-shopping/padlock.png";
 import returns from "../photos/intl-shopping/returns.png";
+
+import { Cloudinary } from "@cloudinary/url-gen";
+
+export const cld = new Cloudinary({
+  cloud: {
+    cloudName: "ochmed",
+  },
+});
+const shoe = cld.image("shopping-categories/shoe");
+const storage = cld.image("shopping-categories/storage");
+const gifts = cld.image("shopping-categories/gifts");
+const giftBox = cld.image("shopping-categories/gift-box");
+const pc = cld.image("shopping-categories/pc");
+const trainToy = cld.image("shopping-categories/train-toy");
+const clothing = cld.image("shopping-categories/clothing");
+const fashion = cld.image("shopping-categories/fashion");
+const plates = cld.image("shopping-categories/plates");
+const planeToy = cld.image("shopping-categories/plane-toy");
+const beautyProducts = cld.image("shopping-categories/beauty-products");
+const utensils = cld.image("shopping-categories/utensils");
+const decor = cld.image("shopping-categories/decor");
+const socks = cld.image("shopping-categories/socks");
+const appliance = cld.image("shopping-categories/appliance");
 
 export const shoppingCategory = [
   {
@@ -120,16 +122,22 @@ export const shoppingCategory = [
     alt: "belt, wallet, bag, shoe, hat",
   },
 ];
+const shop = cld.image("Banners/shop");
+const beauty = cld.image("Banners/beauty");
+const home = cld.image("Banners/home");
+const toys = cld.image("Banners/toys");
+const kitchen = cld.image("Banners/kitchen");
+
 export const banners = [
   {
     id: 1,
     imageUrl: shop,
-    alt: "shopping banne",
+    alt: "shopping banner",
   },
   {
     id: 2,
     imageUrl: beauty,
-    alt: "beauty products banne",
+    alt: "beauty products banner",
   },
   {
     id: 3,
