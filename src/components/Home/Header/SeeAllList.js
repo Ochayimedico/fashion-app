@@ -1,11 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-import forwardArrow from "../../photos/icons/forward-arrow.svg";
-import collapse from "../../photos/icons/collapse.svg";
+import forwardArrow from "../../../photos/icons/forward-arrow.svg";
+import collapse from "../../../photos/icons/collapse.svg";
 import {
   childSeeAllListVariants,
   seeAllListVariants,
-} from "../../utils/animationVariants";
+} from "../../../utils/animationVariants";
 const list = [
   "Early Black Friday Deals",
   "Fashion Music",

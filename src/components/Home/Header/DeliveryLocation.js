@@ -1,5 +1,5 @@
-import location from "../../photos/icons/location.svg";
-import down from "../../photos/icons/down.svg";
+import location from "../../../photos/icons/location.svg";
+import down from "../../../photos/icons/down.svg";
 const DeliveryLocation = () => {
   return (
     <div className=" flex flex-row bg-[#37475A] w-[100%] py-[0.75rem]  px-[0.5rem] flex-start items-center">

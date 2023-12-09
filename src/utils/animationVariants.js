@@ -25,7 +25,8 @@ export const listVariants = {
     x: "0",
     transition: {
       ease: "easeInOut",
-      duration: 2,
+      delay: 0.5,
+      duration: 0.8,
     },
   },
 };
@@ -34,8 +35,8 @@ export const childListVariants = {
   visible: { opacity: 1, x: "0" },
   transition: {
     ease: "easeInOut",
-    delay: 1,
-    duration: 2,
+    delay: 0.5,
+    duration: 0.5,
   },
 };
 
@@ -44,8 +45,8 @@ export const seeAllListVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.5,
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
       ease: "easeIn",
       duration: 0.3,
     },

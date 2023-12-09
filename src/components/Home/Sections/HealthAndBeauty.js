@@ -1,8 +1,6 @@
 import { AdvancedImage } from "@cloudinary/react";
 import ItemsDisplay from "./ItemsDisplay";
 import { cld } from "./ItemsDisplay";
-import { fill } from "@cloudinary/url-gen/actions/resize";
-
 const HealthAndBeauty = () => {
   const myImage = cld.image("items/toothbrush");
   const myImage2 = cld.image("items/beauty-products");

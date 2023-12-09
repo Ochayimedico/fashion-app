@@ -1,8 +1,8 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { AnimatePresence, motion } from "framer-motion";
-import { shoppingCategoryVariants } from "../../utils/animationVariants";
-import { shoppingCategory } from "../../utils/store";
+import { shoppingCategoryVariants } from "../../../utils/animationVariants";
+import { shoppingCategory } from "../../../utils/store";
 import styles from "./ShoppingCategory.module.css";
 import { AdvancedImage } from "@cloudinary/react";
 

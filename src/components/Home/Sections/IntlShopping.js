@@ -1,4 +1,4 @@
-import { intlShopping } from "../../utils/store";
+import { intlShopping } from "../../../utils/store";
 const IntlShopping = () => {
   return (
     <div>

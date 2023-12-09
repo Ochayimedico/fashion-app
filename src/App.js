@@ -1,36 +1,25 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./components/Home/ErrorPage";
+// import Modal from "../src/components/Modal";
+import Home from "./components/Home/Home";
 import "./App.css";
-import { useState } from "react";
-import Header from "./components/Header/Header";
-import SideMenu from "./components/Header/SideMenu";
-import { SideMenuContext } from "./utils/context";
-import Modal from "./components/Modal";
-import BannersAndShoppingCategory from "./components/Banners/BannersAndShoppingCategory";
-import IntlShopping from "./components/Sections/IntlShopping";
-import ShoppingItems from "./components/Sections/ShoppingItems";
-import Footer from "./components/Footer/Footer";
+
+import AuthPage from "./components/Auth/AuthPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  { path: "/signin", element: <AuthPage /> },
+]);
 
 // import Skeleton from "react-loading-skeleton";
 function App() {
-  const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const ctxValue = {
-    isModalOpen,
-    setIsModalOpen,
-    sideMenuIsOpen,
-    setSideMenuIsOpen,
-  };
   return (
     <div>
-      <SideMenuContext.Provider value={ctxValue}>
-        <Header />
-        <SideMenu />
-        <Modal />
-        <BannersAndShoppingCategory />
-        <IntlShopping />
-        <ShoppingItems />
-        <Footer />
-      </SideMenuContext.Provider>
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from "framer-motion";
-import user from "../../photos/icons/avatar.svg";
-import close from "../../photos/icons/close.svg";
+import user from "../../../photos/icons/avatar.svg";
+import close from "../../../photos/icons/close.svg";
 import SideMenuContent from "./SideMenuContent";
 import { useContext } from "react";
-import { SideMenuContext } from "../../utils/context";
-import { sideMenuVariants } from "../../utils/animationVariants";
+import { SideMenuContext } from "../../../utils/context";
+import { sideMenuVariants } from "../../../utils/animationVariants";
 
 const SideMenu = () => {
   const { sideMenuIsOpen, setSideMenuIsOpen, setIsModalOpen } =

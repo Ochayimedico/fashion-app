@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import dropdown from "../../photos/icons/dropdown.svg";
-import home from "../../photos/icons/home.svg";
+import dropdown from "../../../photos/icons/dropdown.svg";
+import home from "../../../photos/icons/home.svg";
 import SeeAllList from "./SeeAllList";
-import { childListVariants, listVariants } from "../../utils/animationVariants";
+import {
+  childListVariants,
+  listVariants,
+} from "../../../utils/animationVariants";
 const SideMenuContent = () => {
   const [isSeeAllListOpen, setIsSeeAllListOpen] = useState(false);
   const expandSeeAllList = () => {

@@ -1,16 +1,18 @@
 import Apparels from "./Apparels.js";
 import Camera from "./Camera.js";
 import Electronics from "./Electronics.js";
-import FashionTrends from "./FashionTrends";
+import FashionTrends from "./FashionTrends.js";
 import HealthAndBeauty from "./HealthAndBeauty.js";
 import PopularBooks from "./PopularBooks.js";
-import Recommended from "./Recommended";
+import Recommended from "./Recommended.js";
 import ShoesSection from "./ShoesSection.js";
+import SignIn from "./SignIn.js";
 import TopPicks from "./TopPicks.js";
 
-const ShoppingItems = () => {
+const MainSectionsRender = () => {
   return (
     <article>
+      <SignIn />
       <Recommended />
       <FashionTrends />
       <ShoesSection />
@@ -23,4 +25,4 @@ const ShoppingItems = () => {
     </article>
   );
 };
-export default ShoppingItems;
+export default MainSectionsRender;

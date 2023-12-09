@@ -1,16 +1,16 @@
 // import Skeleton from "react-loading-skeleton";
 // import "react-loading-skeleton/dist/skeleton.css";
-import forward from "../../photos/icons/forward.svg";
-import menu from "../../photos/icons/menu.svg";
-import search from "../../photos/icons/search.svg";
-import bag from "../../photos/icons/bag.svg";
-import user from "../../photos/icons/avatar.svg";
+import forward from "../../../photos/icons/forward.svg";
+import menu from "../../../photos/icons/menu.svg";
+import search from "../../../photos/icons/search.svg";
+import bag from "../../../photos/icons/bag.svg";
+import user from "../../../photos/icons/avatar.svg";
 // import { Link } from "react-router-dom";
 import Categories from "./Categories";
 import DeliveryLocation from "./DeliveryLocation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useContext } from "react";
-import { SideMenuContext } from "../../utils/context";
+import { SideMenuContext } from "../../../utils/context";
 // import { menuVariants } from "../utils/animationVariants";
 
 const Header = () => {
