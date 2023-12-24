@@ -1,18 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import user from "../../../photos/icons/avatar.svg";
-import close from "../../../photos/icons/close.svg";
 import SideMenuContent from "./SideMenuContent";
 import { useContext } from "react";
 import { SideMenuContext } from "../../../utils/context";
 import { sideMenuVariants } from "../../../utils/animationVariants";
+import { Link } from "react-router-dom";
 
 const SideMenu = () => {
-  const { sideMenuIsOpen, setSideMenuIsOpen, setIsModalOpen } =
-    useContext(SideMenuContext);
-  const closeSideMenu = () => {
-    setSideMenuIsOpen(false);
-    setIsModalOpen(false);
-  };
+  const { sideMenuIsOpen } = useContext(SideMenuContext);
+
   return (
     <AnimatePresence initial={false} mode="wait">
       {sideMenuIsOpen && (
@@ -23,14 +19,11 @@ const SideMenu = () => {
           exit="exit"
           className={`${
             sideMenuIsOpen ? "visible " : "hidden"
-          } w-[80vw] bg-white h-[100%] overflow-y-auto fixed top-0 left-0 z-[100]`}
+          } w-[80vw] bg-white h-[100%] overscroll-none overflow-y-auto fixed top-0 left-0 z-[100]`}
         >
           <motion.div className="p-[1rem] bg-[#0F172A]">
-            <div className="flex flex-row justify-between  my-[0.5rem]">
-              <div className="w-[20px] h-[20px]">
-                <img src={close} alt="close icon" onClick={closeSideMenu} />
-              </div>
-
+            <Link to="/auth-page?form=sign-in"></Link>{" "}
+            <div className="flex flex-row justify-end my-[0.5rem]">
               <div className="flex flex-row ">
                 <p className="text-white text-[0.85rem]">Sign in </p>
                 <div className="inline-block ml-[0.25rem] w-[20px] h-[20px]">
@@ -38,8 +31,8 @@ const SideMenu = () => {
                 </div>
               </div>
             </div>
-            <h1 className="text-left text-white max-w-[50%] text-[1.75rem] leading-[0.8em] font-[600]">
-              <span className="font-[700] text-[1.25rem]"> Browse</span> Fashion
+            <h1 className="text-left text-white max-w-[50%] text-[1.65rem] leading-[1em] font-[500]">
+              <span className="font-[600] text-[1.15rem]"> Browse</span> Fashion
             </h1>
           </motion.div>
           <motion.div>

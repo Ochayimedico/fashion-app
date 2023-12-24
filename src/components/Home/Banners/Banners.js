@@ -24,11 +24,11 @@ const Banners = () => {
       ),
   });
 
-  console.log(currentImage);
+  // console.log(currentImage);
   return (
     <section className="w-full h-full relative  scrollbar-hide">
       <AnimatePresence mode="wait">
-        <motion.div className="w-full h-[375px] flex flex-row" {...handlers}>
+        <motion.div className="w-full  flex flex-row" {...handlers}>
           {banners.map((banner, index) => (
             <AdvancedImage
               initial={{ opacity: 0 }}

@@ -4,7 +4,7 @@ export const sideMenuVariants = {
     opacity: 1,
     x: "0",
     transition: {
-      duration: 1,
+      duration: 0.5,
 
       ease: "easeInOut",
     },
@@ -13,7 +13,7 @@ export const sideMenuVariants = {
     x: "-100vw",
     opacity: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
       ease: "easeOut",
     },
   },
@@ -25,8 +25,8 @@ export const listVariants = {
     x: "0",
     transition: {
       ease: "easeInOut",
-      delay: 0.5,
-      duration: 0.8,
+      delay: 0.25,
+      duration: 0.5,
     },
   },
 };
@@ -45,19 +45,20 @@ export const seeAllListVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.3,
+      staggerChildren: 0.025,
+      delayChildren: 0.025,
       ease: "easeIn",
-      duration: 0.3,
+      duration: 0.1,
     },
   },
-  // exit: {
-  //   opacity: 0,
-  //   y: "-100%",
-  //   transition: {
-  //     duration: 1,
-  //   },
-  // },
+  exit: {
+    y: "100%",
+    // height: 0,
+    transition: {
+      duration: 1,
+      ease: "linear",
+    },
+  },
 };
 export const childSeeAllListVariants = {
   hidden: { opacity: 0, y: -5 },

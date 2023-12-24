@@ -1,9 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/Home/ErrorPage";
-// import Modal from "../src/components/Modal";
 import Home from "./components/Home/Home";
 import "./App.css";
-
 import AuthPage from "./components/Auth/AuthPage";
 
 const router = createBrowserRouter([
@@ -12,7 +10,7 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <ErrorPage />,
   },
-  { path: "/signin", element: <AuthPage /> },
+  { path: "/auth-page", element: <AuthPage /> },
 ]);
 
 // import Skeleton from "react-loading-skeleton";

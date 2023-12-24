@@ -76,10 +76,11 @@ const SeeAllList = ({ isSeeAllListOpen, setIsSeeAllListOpen }) => {
     <div>
       <AnimatePresence>
         <motion.ul
+          key={isSeeAllListOpen}
           variants={seeAllListVariants}
           initial="hidden"
           animate={isSeeAllListOpen && "visible"}
-          // exit="exit"
+          exit="exit"
           className={`${
             !isSeeAllListOpen ? "hidden" : "visible"
           } border-[#ccc] border-t-[1px] border-solid mx-[1rem] py-[0.5rem]`}
@@ -100,18 +101,20 @@ const SeeAllList = ({ isSeeAllListOpen, setIsSeeAllListOpen }) => {
               )}
             </motion.li>
           ))}
-          <motion.li
-            variants={childSeeAllListVariants}
-            className="py-[0.5rem] "
-            onClick={collapseSeeAllList}
-          >
-            See Less
-            <img
-              className="inline-block ml-[2px]"
-              src={collapse}
-              alt="collapse arrow"
-            />
-          </motion.li>
+          <AnimatePresence>
+            <motion.li
+              variants={childSeeAllListVariants}
+              className="py-[0.5rem] "
+              onClick={collapseSeeAllList}
+            >
+              See Less
+              <img
+                className="inline-block ml-[2px]"
+                src={collapse}
+                alt="collapse arrow"
+              />
+            </motion.li>
+          </AnimatePresence>
         </motion.ul>
       </AnimatePresence>
     </div>

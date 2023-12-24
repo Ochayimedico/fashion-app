@@ -9,7 +9,7 @@ const ErrorPage = () => {
       <Navbar />
       <div
         id="error-page"
-        className="flex justify-center items-center flex-col mt-[30%]"
+        className="flex justify-center items-center flex-col mt-[6rem]"
       >
         <img className="w-[150px] h-[150px]" src={oopsPic} alt="oops" />
         <p className="font-bold text-[1.15rem] text-center text-[#00798e] m-[1rem]">

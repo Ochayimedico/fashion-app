@@ -44,10 +44,10 @@ const ItemsDisplay = ({
               <div className="bg-[#CC0C39] rounded-[2px] text-white py-[0.35rem] px-[0.45rem]  mr-[4px] ">
                 {price}
               </div>
-              <p className="text-[#CC0C39] items-center">{priceTag}</p>
+              <span className="text-[#CC0C39] items-center">{priceTag}</span>
             </div>
           )}
-          {tag && <p className="text-black font-[500]">{tag}</p>}
+          {tag && <span className="text-black font-[500]">{tag}</span>}
         </div>
         <div
           className={`${
@@ -65,10 +65,10 @@ const ItemsDisplay = ({
               <div className="bg-[#CC0C39] rounded-[2px] text-white py-[0.35rem] px-[0.45rem] mr-[4px]">
                 {price2}
               </div>
-              <p className="text-[#CC0C39] items-center">{priceTag2}</p>
+              <span className="text-[#CC0C39] items-center">{priceTag2}</span>
             </div>
           )}
-          {tag2 && <p className="text-black font-[500]">{tag2}</p>}
+          {tag2 && <span className="text-black font-[500]">{tag2}</span>}
         </div>
         {image3 && (
           <div
@@ -87,14 +87,16 @@ const ItemsDisplay = ({
                 <div className="bg-[#CC0C39] rounded-[2px] text-white py-[0.35rem] px-[0.45rem] mr-[4px]">
                   {price2}
                 </div>
-                <p className="text-[#CC0C39] items-center">{priceTag2}</p>
+                <span className="text-[#CC0C39] items-center">{priceTag2}</span>
               </div>
             )}
-            {tag2 && <p className="text-black font-[500]">{tag2}</p>}
+            {tag2 && <span className="text-black font-[500]">{tag2}</span>}
           </div>
         )}
       </div>
-      {link && <p className="my-[0.5rem] font-[600] text-[#147C8F]">{link}</p>}
+      {link && (
+        <span className="my-[0.5rem] font-[600] text-[#147C8F]">{link}</span>
+      )}
     </div>
   );
 };

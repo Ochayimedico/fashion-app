@@ -2,10 +2,8 @@ import { useState } from "react";
 import Header from "../Home/Header/Header";
 import SideMenu from "../Home/Header/SideMenu";
 import { SideMenuContext } from "../../utils/context";
-
 import BannersAndShoppingCategory from "../Home/Banners/BannersAndShoppingCategory";
 import IntlShopping from "../Home/Sections/IntlShopping";
-
 import Footer from "../Home/Footer/Footer";
 import MainSectionsRender from "../Home/Sections/MainSectionsRender";
 import Modal from "../Modal";
@@ -21,8 +19,9 @@ const Home = () => {
     sideMenuIsOpen,
     setSideMenuIsOpen,
   };
+
   return (
-    <div>
+    <div className={`${sideMenuIsOpen && "fixed"} overflow-hidden `}>
       <SideMenuContext.Provider value={ctxValue}>
         <Modal />
         <Header />

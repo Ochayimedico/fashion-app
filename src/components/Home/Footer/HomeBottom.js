@@ -1,3 +1,4 @@
+// import { Link } from "react-router-dom";
 import upArrow from "../../../photos/icons/up-arrow.svg";
 
 const HomeBottom = () => {
@@ -17,15 +18,18 @@ const HomeBottom = () => {
     "Customer Service",
   ];
   return (
-    <section className="flex flex-col max-w-[100vw] text-white  ">
-      <div className="bg-[#37475A] flex-col  flex w-full justify-center items-center py-[0.25rem]">
-        <img
-          className="inline-block pb-[0.25rem]"
-          src={upArrow}
-          alt="up arrow"
-        />
-        <p className="uppercase text-center text-[0.65rem]">top of page</p>
-      </div>
+    <section className="flex flex-col max-w-[100vw] text-white">
+      <a href="#home">
+        <div className="bg-[#37475A] flex-col flex w-full justify-center items-center py-[0.25rem]">
+          <img
+            className="inline-block pb-[0.25rem]"
+            src={upArrow}
+            alt="up arrow"
+          />
+          <p className="uppercase text-center text-[0.65rem]">top of page</p>
+        </div>
+      </a>
+
       <div className="bg-[#232F3E] py-[1.25rem] px-[1rem] w-[100vw] flex flex-row flex-wrap  font-[500] justify-between leading-[1.2em]">
         <ul className="w-[50%] pt-[1rem]">
           {leftSideList.map((list, index) => (

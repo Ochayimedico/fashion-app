@@ -11,6 +11,7 @@ import DeliveryLocation from "./DeliveryLocation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useContext } from "react";
 import { SideMenuContext } from "../../../utils/context";
+import { Link } from "react-router-dom";
 // import { menuVariants } from "../utils/animationVariants";
 
 const Header = () => {
@@ -27,11 +28,15 @@ const Header = () => {
   };
   return (
     <div>
-      <header className=" px-[0.5rem] pt-[0.5rem] pb-[0.75rem] bg-[#0F172A]">
+      <header
+        id="home"
+        className=" px-[0.5rem] pt-[0.5rem] pb-[0.75rem] bg-[#0F172A]"
+      >
         <div className=" flex flex-row justify-between">
           <div className="flex flex-row items-center">
             <AnimatePresence>
               <motion.div
+                className="mx-[0.25rem]"
                 // variants={menuVariants}
                 // initial="hidden"
                 // animate="visible"
@@ -44,21 +49,25 @@ const Header = () => {
             <h1 className="text-white text-[1.5rem] ml-[0.65rem]">fashion</h1>
           </div>
           <div className="items-center flex flex-row">
-            <div className="flex flex-row items-center">
-              <p className="text-white">Sign in </p>
+            <Link
+              to="/auth-page?form=sign-in
+            "
+            >
+              <div className="flex flex-row items-center">
+                <p className="text-white">Sign in </p>
+                <img
+                  className="inline-block"
+                  src={forward}
+                  alt="forward arrow icon"
+                />
 
-              <img
-                className="inline-block"
-                src={forward}
-                alt="forward arrow icon"
-              />
-
-              <img
-                className="inline-block mr-[0.5rem]"
-                src={user}
-                alt="user icon"
-              />
-            </div>
+                <img
+                  className="inline-block mr-[0.5rem]"
+                  src={user}
+                  alt="user icon"
+                />
+              </div>{" "}
+            </Link>
             <div className=" mx-[0.5rem]">
               <img src={bag} alt="shopping bag icon" />
             </div>
