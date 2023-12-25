@@ -6,8 +6,9 @@ import BannersAndShoppingCategory from "../Home/Banners/BannersAndShoppingCatego
 import IntlShopping from "../Home/Sections/IntlShopping";
 import Footer from "../Home/Footer/Footer";
 import MainSectionsRender from "../Home/Sections/MainSectionsRender";
-import Modal from "../Modal";
+import Modal from "../extras/Modal";
 import HomeBottom from "./Footer/HomeBottom";
+import BottomLink from "./BottomLink";
 
 const Home = () => {
   const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
@@ -23,6 +24,7 @@ const Home = () => {
   return (
     <div className={`${sideMenuIsOpen && "fixed"} overflow-hidden `}>
       <SideMenuContext.Provider value={ctxValue}>
+        <BottomLink />
         <Modal />
         <Header />
         <SideMenu />

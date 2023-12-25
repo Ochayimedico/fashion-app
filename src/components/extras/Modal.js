@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import close from "../photos/icons/close.svg";
-import { SideMenuContext } from "../utils/context";
+import close from "../../photos/icons/close.svg";
+import { SideMenuContext } from "../../utils/context";
 
 const Modal = () => {
   const { isModalOpen, setIsModalOpen, setSideMenuIsOpen } =

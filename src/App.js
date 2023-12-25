@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./components/Home/ErrorPage";
+import ErrorPage from "./components/extras/ErrorPage";
 import Home from "./components/Home/Home";
 import "./App.css";
 import AuthPage from "./components/Auth/AuthPage";

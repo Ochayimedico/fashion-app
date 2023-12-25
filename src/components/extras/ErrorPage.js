@@ -1,6 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import oopsPic from "../../photos/oops.png";
-import Navbar from "./Navbar";
+import Navbar from "../Home/Navbar";
 const ErrorPage = () => {
   const error = useRouteError();
 
